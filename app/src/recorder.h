@@ -6,11 +6,13 @@
 #include <SDL2/SDL_mutex.h>
 #include <SDL2/SDL_thread.h>
 
+#include "config.h"
 #include "common.h"
-#include "queue.h"
+#include "util/queue.h"
 
 enum recorder_format {
-    RECORDER_FORMAT_MP4 = 1,
+    RECORDER_FORMAT_AUTO,
+    RECORDER_FORMAT_MP4,
     RECORDER_FORMAT_MKV,
 };
 

@@ -2,9 +2,11 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
+#include <assert.h>
 #include <stdbool.h>
 #include <stddef.h>
-#include <SDL2/SDL_assert.h>
+
+#include "config.h"
 
 // To define a queue type of "struct foo":
 //    struct queue_foo QUEUE(struct foo);
@@ -65,7 +67,7 @@
 // type so that we can "return" it)
 #define queue_take(PQ, NEXTFIELD, PITEM) \
     (void) ({ \
-        SDL_assert(!queue_is_empty(PQ)); \
+        assert(!queue_is_empty(PQ)); \
         *(PITEM) = (PQ)->first; \
         (PQ)->first = (PQ)->first->NEXTFIELD; \
     })

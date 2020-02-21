@@ -5,8 +5,9 @@
 #include <SDL2/SDL_mutex.h>
 #include <SDL2/SDL_thread.h>
 
-#include "cbuf.h"
+#include "config.h"
 #include "command.h"
+#include "util/cbuf.h"
 
 typedef enum {
     ACTION_INSTALL_APK,

@@ -3,8 +3,9 @@
 
 #include <stdbool.h>
 
+#include "config.h"
 #include "common.h"
-#include "net.h"
+#include "util/net.h"
 
 #define DEVICE_NAME_FIELD_LENGTH 64
 
